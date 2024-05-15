@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>Pendrive Bootavel (CMD e Diskpart)</h1>
+
+    <section>
+        <h2>O que é um Pendrive bootavel?</h2>
+        <p>
+            Os pendrives bootáveis são unidades de armazenamento portáteis, como pen drives ou discos externos,
+            que contêm um sistema operacional inicializável. Eles são úteis em situações onde você precisa executar
+            um sistema operacional em um computador sem um disco rígido funcional ou quando deseja testar um sistema
+            operacional sem instalá-lo permanentemente.
+        </p>
+        <p>
+            Para criar um pendrive bootável, você geralmente precisa de um arquivo de imagem ISO do sistema operacional
+            que deseja instalar ou executar, e um software de criação de pendrive bootável, como o <b>Rufos</b>,
+            <b>Ventoy</b> ou
+            o utilitário de criação de mídia de instalação do Windows. Você conecta o pendrive ao computador, seleciona
+            o arquivo de imagem ISO e segue as instruções do software para criar o pendrive bootável.
+        </p>
+        <p>
+            Uma vez criado, você pode conectar o pendrive a qualquer computador compatível, reiniciar o sistema e
+            iniciar
+            a partir do pendrive. Isso permite que você execute o sistema operacional contido no pendrive sem modificar
+            o
+            sistema operacional principal do computador.
+        </p>
+        <p>
+            Os pendrives bootáveis são frequentemente usados para propósitos de recuperação de dados, instalação de
+            sistemas
+            operacionais alternativos, como o Linux, ou para fins de diagnóstico de hardware. Eles são uma ferramenta
+            valiosa
+            para técnicos de informática, administradores de sistemas e usuários avançados que precisam de flexibilidade
+            na
+            manutenção e solução de problemas de computadores.
+        </p>
+
+        <span><b>Neste tutorial será aborado o metódo de criação do boot usado o <i>CMD</i>, em linha de
+                comnado.</b></span>
+    </section>
+
+    <h2>Procedimentos:</h2>
+    <section>
+        <p>
+            <b>1º)</b>
+            Digite na barra de pesquisa do menu iniciar o comando <b>CMD</b>, depois clique com o botão direito sobre o
+            icone em seguida clique em Executar como <b>Administrador</b>.
+        </p>
+        <p>
+            <b>2º)</b>
+            Então você vai visualizar a tela preta do Prompt de Comando o CMD.
+        </p>
+        <p>
+            <b>3º)</b>
+            Conecte o pen drive bootavel em uma das suas saídas USB e certifique-se que ele é o único pendrive conectado
+            em seu PC, e certifique-se que você sabe qual é a capacidade total dele, ex. 4GB ou 8Gb.
+        </p>
+        <p>
+            <b>4º)</b>
+            Digite o seguintes comandos na <b>sequência</b>:
+        </p>
+        <ul>
+            <li>Digite: <em><code>diskpart</code></em></li>
+            <li>Depois: <em><code>disk</code></em></li>
+            <li>Depois: <em><code>disk list</code></em>
+                <ul>
+                    <li>Irá aparecer uma lista de discos de aramzenamento, um deles é o seu pendrive, deve identificar
+                        pelo
+                        tamanho. <br>
+                        <b>Cuidado para não fazer o procedimento no disco errado</b>.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Após identificar o pendrive digite os seguintes comandos:
+                <ul>
+                    <li><em><code>select disk <b>X</b></code></em> (substitua o <b>x</b> pela letra/numero do seu
+                        pendrive que aparece na lista)</li>
+                    <li><em><code>clean</code></em> (comando para limpar as partições do pendrive)</li>
+                    <li><em><code>create partition primary</code></em> (comando para cirar uma partição primaria)</li>
+                    <li><em><code>select partition 1</code></em> (comando para selecionar a partição criada)</li>
+                    <li><em><code>active</code></em> (comando para definir a partição como ativa)</li>
+                    <li><em><code>format fs=fat32</code></em> (comando para formatar o pendrive, caso for usar uma ISO
+                        maior
+                        que <b>4GB</b> use <b>NTFS</b> no lugar de <b>fat32</b>)</li>
+                    <li><em><code>assign</code></em>(comando que monta o pendrive)</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b>5º)</b>
+            Copie todos os arquivos de dentro do DVD de Instalação ou da imagem iso do Windows que queira usar para
+            dentro do pen drive.
+        </p>
+        <p>
+            <b>6º)</b>
+            O pendrive esta pronto para ser usado!
+        </p>
+    </section>
+
+    <h3>Fonte:</h3>
+    <p><a target="_blank" href="https://comodesenvolver.com.br/como-criar-um-pendrive-bootavel-pelo-cmd/">Artigo como cirar pendrive Botavel</a></p>
+</body>
+
+</html>

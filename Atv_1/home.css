@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    color: black;
+    text-align: justify;
+}
+
+span {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    color: black;
+    text-align: justify;
+}
+
+code {
+    background-color: #2999c5;
+    padding: 0 7px 0 7px;
+    color: #000;
+    border-radius: min(1.5rem, 2vw);
+}
