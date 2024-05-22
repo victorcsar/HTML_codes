@@ -33,3 +33,27 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+
+.col1 {
+    background-color: blue;
+}
+
+.col2 {
+    background-color: red;
+}
+
+.col3 {
+    background-color: green;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #ff0000;
+}
