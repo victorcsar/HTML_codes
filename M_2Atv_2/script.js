@@ -3,10 +3,10 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const age = document.getElementById('age').value;
+    const age = document.getElementById('idade').value;
 
     // Criar nova linha para a tabela
-    const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+    const table = document.getElementById('tabela').getElementsByTagName('tbody')[0];
     const newRow = table.insertRow();
 
     // Inserir células e preencher com os valores do formulário
