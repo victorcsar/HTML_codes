@@ -24,3 +24,31 @@ p {
     color: black;
     text-align: justify;
 }
+a {
+    text-decoration: none;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    display: block;
+    margin: 0 auto;
+}
+
+.ingredients-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.ingredients-container li {
+    margin-bottom: 10px;
+}
+.ingredients-container img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; 
+    height: 100%; 
+}
