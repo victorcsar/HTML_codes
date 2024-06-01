@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+h1 {
+    color: black;
+}
+
+#paragrafo {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+.destaque {
+    color: #ff6347;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+    border-bottom: 1px solid #1e90ff;
+}
+
+a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+    border-bottom: none;
+}
